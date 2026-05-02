@@ -15,18 +15,44 @@
   <div class="ambient-orb orb-two"></div>
   <div class="ambient-orb orb-three"></div>
 
-
-  <section class="field-gate hidden" id="fieldGate" aria-label="Chọn lĩnh vực học hôm nay">
-    <div class="modal-card field-card glass">
-      <div class="field-card-head">
+  <section class="readme-view hidden" id="readmeView" aria-label="README công dụng của website" aria-hidden="true">
+    <div class="readme-panel glass">
+      <div class="readme-head">
         <div>
-          <span class="eyebrow">Today learning plan</span>
-          <h2>Bạn muốn học gì hôm nay?</h2>
-          <p>Chọn một lĩnh vực. Giáo án, ví dụ và bài tập trắc nghiệm sẽ đổi theo lĩnh vực bạn chọn.</p>
+          <span class="eyebrow">README • Quick guide</span>
+          <h2>
+            <span class="en">How to use this website</span>
+            <span class="vi">Website này dùng để làm gì?</span>
+          </h2>
+          <p>
+            <span class="en">This is a static self-study website for workplace English. It does not require login or collect email. Your scores and progress are saved only in this browser using localStorage.</span>
+            <span class="vi">Đây là web tĩnh tự học tiếng Anh cho người đi làm. Không cần đăng nhập, không thu email; tiến độ và điểm số được lưu trực tiếp trên trình duyệt bằng localStorage.</span>
+          </p>
         </div>
-        <button class="ghost-btn" id="closeFieldGateBtn" type="button">Đóng</button>
+        <button class="secondary-btn" id="readmeBackBtn" type="button">← Back về trang chính</button>
       </div>
-      <div class="field-options" id="fieldOptions"></div>
+      <div class="readme-grid">
+        <div class="readme-card">
+          <strong>1. Choose your field</strong>
+          <p>Chọn Ẩm thực, Kế toán, Analyst, Du lịch, Khách sạn, Kinh doanh hoặc Marketing để bài học đổi đúng ngữ cảnh công việc.</p>
+        </div>
+        <div class="readme-card">
+          <strong>2. Choose Level 1–10</strong>
+          <p>Level 1 là câu đơn cơ bản; Level 10 là tiếng Anh nâng cao cho báo cáo, đàm phán và executive summary.</p>
+        </div>
+        <div class="readme-card">
+          <strong>3. Learn, listen, practice</strong>
+          <p>Mỗi level có thêm từ vựng mới, phiên âm/cách đọc, ví dụ, tình huống, mini dialogue và nút loa 🔊 để nghe giọng đọc English - American khi bạn nhấn.</p>
+        </div>
+        <div class="readme-card">
+          <strong>4. Track progress</strong>
+          <p>Bảng tiến độ lưu số bài hoàn thành, điểm trung bình và streak học tập trên thiết bị hiện tại. Nội dung bài học mở rộng theo lĩnh vực và Level 1–10.</p>
+        </div>
+      </div>
+      <details class="readme-details">
+        <summary>Lưu ý về cập nhật bài học hằng ngày</summary>
+        <p>Vì đây là web tĩnh, website không tự lấy/copy bài từ web khác. Thay vào đó, hệ thống tạo micro-lesson mới theo ngày, lĩnh vực, level và gợi ý nguồn học uy tín để bạn tham khảo thêm.</p>
+      </details>
     </div>
   </section>
 
@@ -40,96 +66,20 @@
         </span>
       </a>
       <div class="nav-actions">
-        <a href="#readme">README</a>
-        <a href="#lessons">Bài học</a>
+        <button class="ghost-btn" id="openReadmeNavBtn" type="button">README</button>
+        <a href="#study-menu">Hôm nay học gì?</a>
         <a href="#quiz-zone">Trắc nghiệm</a>
         <a href="#progress-zone">Tiến bộ</a>
         <button class="ghost-btn" id="resetProgressBtn" type="button">Xóa tiến độ</button>
       </div>
     </nav>
 
-    <section class="hero-grid">
-      <div class="hero-copy glass">
-        <span class="eyebrow">Updated for workplace English • 2026</span>
-        <h1>
-          <span class="en">Learn English that actually works at work.</span>
-          <span class="vi">Tự học tiếng Anh dùng được ngay trong công việc.</span>
-        </h1>
-        <p>
-          <span class="en">Practice workplace English by field and level: meetings, email, AI prompts, presentations, data, service and career situations with bilingual notes, auto-scored exercises and progress tracking.</span>
-          <span class="vi">Luyện tiếng Anh công việc theo lĩnh vực và level: họp, email, prompt AI, thuyết trình, dữ liệu, dịch vụ và nghề nghiệp với ghi chú song ngữ, bài tập tự chấm điểm và theo dõi tiến bộ.</span>
-        </p>
-        <div class="hero-actions">
-          <a class="primary-btn" href="#lessons">Bắt đầu học</a>
-          <a class="secondary-btn" href="#progress-zone">Xem tiến độ</a>
-        </div>
-        <div class="stats-row" aria-label="Course summary">
-          <div><strong id="heroLessonCount">0</strong><span>Bài học</span></div>
-          <div><strong id="heroQuestionCount">0</strong><span>Câu hỏi</span></div>
-          <div><strong>60'</strong><span>Đổi vibe</span></div>
-          <div><strong>7</strong><span>Lĩnh vực</span></div>
-          <div><strong>10</strong><span>Level</span></div>
-        </div>
-      </div>
-
-      <aside class="hero-card glass">
-        <div class="image-frame">
-          <img id="vibeImage" src="" alt="Không gian học tập chill" />
-          <button class="floating-chip" id="changeVibeBtn" type="button">Đổi không khí</button>
-        </div>
-        <div class="vibe-info">
-          <div>
-            <span class="label">Current vibe</span>
-            <h2 id="vibeTitle">Loading...</h2>
-          </div>
-          <p id="vibeText">Mỗi 60 phút, giao diện tự đổi hình nền và mood để giảm nhàm chán.</p>
-          <div class="countdown"><span id="vibeCountdown">60:00</span> đến lần đổi tiếp theo</div>
-        </div>
-      </aside>
-    </section>
-  </header>
-
-  <main>
-
-    <section class="readme-panel glass" id="readme" aria-label="README công dụng của website">
-      <div class="readme-head">
-        <div>
-          <span class="eyebrow">README • Hướng dẫn nhanh</span>
-          <h2>Website này dùng để làm gì?</h2>
-          <p>Đây là web tĩnh tự học tiếng Anh cho người đi làm. Không cần đăng nhập, không thu email; tiến độ và điểm số được lưu trực tiếp trên trình duyệt bằng localStorage.</p>
-        </div>
-        <a class="secondary-btn" href="#lessons">Vào bài học</a>
-      </div>
-      <div class="readme-grid">
-        <div class="readme-card">
-          <strong>1. Chọn lĩnh vực</strong>
-          <p>Chọn Ẩm thực, Kế toán, Analyst, Du lịch, Khách sạn, Kinh doanh hoặc Marketing để bài học đổi đúng ngữ cảnh công việc.</p>
-        </div>
-        <div class="readme-card">
-          <strong>2. Chọn Level 1–10</strong>
-          <p>Level 1 là câu đơn cơ bản; Level 10 là tiếng Anh nâng cao cho báo cáo, đàm phán và executive summary.</p>
-        </div>
-        <div class="readme-card">
-          <strong>3. Học và làm quiz</strong>
-          <p>Mỗi bài có mẫu câu, cụm từ, ví dụ Anh/Việt, bài tập bắt buộc và trắc nghiệm tự chấm điểm.</p>
-        </div>
-        <div class="readme-card">
-          <strong>4. Theo dõi tiến bộ</strong>
-          <p>Bảng tiến độ lưu số bài hoàn thành, điểm trung bình và streak học tập trên thiết bị hiện tại.</p>
-        </div>
-      </div>
-      <details class="readme-details">
-        <summary>Lưu ý về cập nhật bài học hằng ngày</summary>
-        <p>Vì đây là web tĩnh, website không tự lấy/copy bài từ web khác. Thay vào đó, hệ thống tạo micro-lesson mới theo ngày, lĩnh vực, level và gợi ý nguồn học uy tín để bạn tham khảo thêm.</p>
-      </details>
-    </section>
     <section class="toolbar glass" aria-label="Learning controls">
       <div>
         <span class="label">Ngôn ngữ / Language</span>
         <div class="segmented" role="group" aria-label="Language mode">
-          <button type="button" class="active" data-lang-option="both">Anh + Việt</button>
+          <button type="button" class="active" data-lang-option="both">Anh - Việt</button>
           <button type="button" data-lang-option="en">English</button>
-          <button type="button" data-lang-option="vi">Tiếng Việt</button>
         </div>
       </div>
       <div>
@@ -153,28 +103,61 @@
       </div>
     </section>
 
-    <section class="field-picker glass" aria-label="Chọn lĩnh vực học hôm nay">
-      <div>
-        <span class="label">Bước 1 • Lĩnh vực học hôm nay</span>
-        <h2 id="fieldPickerTitle">Bạn muốn học gì hôm nay?</h2>
-        <p>Chọn lĩnh vực để giáo án, ví dụ, bài tập và trắc nghiệm tự đổi theo đúng ngữ cảnh công việc.</p>
+    <section class="hero-grid">
+      <div class="hero-copy glass">
+        <span class="eyebrow">Updated for workplace English • 2026</span>
+        <h1>
+          <span class="en">Learn English that actually works at work.</span>
+          <span class="vi">Tự học tiếng Anh dùng được ngay trong công việc.</span>
+        </h1>
+        <p>
+          <span class="en">Practice workplace English by field and level: meetings, email, AI prompts, presentations, data, service and career situations with bilingual notes, American pronunciation, auto-scored exercises and progress tracking.</span>
+          <span class="vi">Luyện tiếng Anh công việc theo lĩnh vực và level: họp, email, prompt AI, thuyết trình, dữ liệu, dịch vụ và nghề nghiệp với ghi chú song ngữ, phát âm Mỹ, bài tập tự chấm điểm và theo dõi tiến bộ.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#study-menu">Bắt đầu học</a>
+          <button class="secondary-btn" id="openReadmeBtn" type="button">Xem README</button>
+        </div>
+        <div class="stats-row" aria-label="Course summary">
+          <div><strong id="heroLessonCount">0</strong><span>Bài học</span></div>
+          <div><strong id="heroQuestionCount">0</strong><span>Câu hỏi</span></div>
+          <div><strong>7</strong><span>Lĩnh vực</span></div>
+          <div><strong>10</strong><span>Level</span></div>
+        </div>
       </div>
-      <button class="secondary-btn field-select-btn" id="changeFieldBtn" type="button">
-        <span id="currentFieldBadge">Lĩnh vực hiện tại: Kinh doanh</span>
+
+      <aside class="hero-card glass">
+        <div class="image-frame">
+          <img id="vibeImage" src="" alt="Không gian học tập chill" />
+          <button class="floating-chip" id="changeVibeBtn" type="button">Đổi không khí</button>
+        </div>
+        <div class="vibe-info">
+          <div>
+            <span class="label">Current vibe</span>
+            <h2 id="vibeTitle">Loading...</h2>
+          </div>
+          <p id="vibeText">Mỗi 60 phút, giao diện tự đổi hình nền và mood để giảm nhàm chán.</p>
+          <div class="countdown"><span id="vibeCountdown">60:00</span> đến lần đổi tiếp theo</div>
+        </div>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="study-selector glass" id="study-menu" aria-label="Hôm nay bạn học gì">
+      <div class="study-selector-head">
+        <div>
+          <span class="label">Hôm nay bạn học gì?</span>
+          <h2 id="studyPickerTitle">Chọn lĩnh vực và level học tập</h2>
+          <p id="studyPickerText">Click vào box bên dưới để xổ xuống 7 lĩnh vực. Trong mỗi lĩnh vực, chọn Level 1–10 để cập nhật nội dung học.</p>
+        </div>
+        <div class="selection-badge" id="currentSelectionBadge">Kinh doanh • Level 1</div>
+      </div>
+      <button class="study-menu-toggle" id="studyMenuToggle" type="button" aria-expanded="false" aria-controls="fieldOptions">
+        <span id="studyMenuToggleText">Click để chọn lĩnh vực và level</span>
         <span aria-hidden="true">▾</span>
       </button>
-    </section>
-
-    <section class="level-picker glass" id="levelPicker" aria-label="Chọn cấp độ học tập">
-      <div class="level-picker-head">
-        <div>
-          <span class="label">Bước 2 • Chọn Level</span>
-          <h2 id="levelPickerTitle">Chọn level từ 1 đến 10</h2>
-          <p id="levelPickerText">Level càng cao, bài học càng dài, ngữ pháp và tình huống càng phức tạp.</p>
-        </div>
-        <div class="level-current" id="currentLevelBadge">Level 1 • Cơ bản</div>
-      </div>
-      <div class="level-options" id="levelOptions"></div>
+      <div class="study-menu-panel hidden" id="fieldOptions"></div>
     </section>
 
     <section class="daily-update glass" id="dailyUpdate" aria-label="Cập nhật bài học hằng ngày">
@@ -200,8 +183,8 @@
     </section>
 
     <section class="section-heading" id="lessons">
-      <span class="eyebrow">Course map</span>
-      <h2 id="courseMapTitle">8 bài học theo lĩnh vực và level</h2>
+      <span class="eyebrow">Today course map</span>
+      <h2 id="courseMapTitle">Hôm nay bạn học gì?</h2>
       <p id="courseMapText">Mỗi bài có mục tiêu, từ vựng, mẫu câu, ví dụ song ngữ, bài tập bắt buộc và điểm tự động.</p>
     </section>
 

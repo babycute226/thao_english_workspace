@@ -266,6 +266,142 @@ const sourceResources = [
   { title: "Cambridge Business English", url: "https://www.cambridgeenglish.org/in/exams-and-tests/business-english/" }
 ];
 
+
+const fieldVocabularyBank = {
+  food: [
+    { term: "reservation", ipa: "/ˌrezərˈveɪʃən/", vi: "đặt bàn", sample: "Please confirm the reservation before noon." },
+    { term: "ingredient", ipa: "/ɪnˈɡriːdiənt/", vi: "nguyên liệu", sample: "We need to check the ingredient list with the chef." },
+    { term: "supplier", ipa: "/səˈplaɪər/", vi: "nhà cung cấp", sample: "The supplier will deliver fresh seafood tomorrow." },
+    { term: "portion", ipa: "/ˈpɔːrʃən/", vi: "khẩu phần", sample: "The portion size should be consistent for every guest." },
+    { term: "allergy", ipa: "/ˈælərdʒi/", vi: "dị ứng", sample: "Please ask the guest about any food allergy." },
+    { term: "turnover", ipa: "/ˈtɜːrnoʊvər/", vi: "vòng quay", sample: "Table turnover improved after we changed the seating plan." },
+    { term: "signature dish", ipa: "/ˈsɪɡnətʃər dɪʃ/", vi: "món đặc trưng", sample: "The signature dish should appear at the top of the menu." },
+    { term: "service recovery", ipa: "/ˈsɜːrvɪs rɪˈkʌvəri/", vi: "khắc phục dịch vụ", sample: "Service recovery is important when a guest has a bad experience." },
+    { term: "food safety", ipa: "/fuːd ˈseɪfti/", vi: "an toàn thực phẩm", sample: "Food safety training is required for the whole team." },
+    { term: "menu engineering", ipa: "/ˈmenjuː ˌendʒɪˈnɪrɪŋ/", vi: "tối ưu thực đơn", sample: "Menu engineering helps us promote profitable items." }
+  ],
+  accounting: [
+    { term: "invoice", ipa: "/ˈɪnvɔɪs/", vi: "hóa đơn", sample: "Could you please send the invoice again?" },
+    { term: "receipt", ipa: "/rɪˈsiːt/", vi: "biên lai", sample: "Please attach the receipt to the expense report." },
+    { term: "reconciliation", ipa: "/ˌrekənsɪliˈeɪʃən/", vi: "đối soát", sample: "Bank reconciliation must be completed before closing." },
+    { term: "payable", ipa: "/ˈpeɪəbl/", vi: "khoản phải trả", sample: "The payable amount is due next Friday." },
+    { term: "receivable", ipa: "/rɪˈsiːvəbl/", vi: "khoản phải thu", sample: "The receivable balance increased this month." },
+    { term: "closing", ipa: "/ˈkloʊzɪŋ/", vi: "khóa sổ", sample: "Monthly closing starts on the last working day." },
+    { term: "variance", ipa: "/ˈveriəns/", vi: "chênh lệch", sample: "The variance should be explained in the report." },
+    { term: "accrual", ipa: "/əˈkruːəl/", vi: "khoản dồn tích", sample: "We need to record an accrual for this expense." },
+    { term: "audit trail", ipa: "/ˈɔːdɪt treɪl/", vi: "dấu vết kiểm toán", sample: "The audit trail helps us verify each transaction." },
+    { term: "compliance", ipa: "/kəmˈplaɪəns/", vi: "tuân thủ", sample: "Compliance is essential when preparing tax documents." }
+  ],
+  analyst: [
+    { term: "dashboard", ipa: "/ˈdæʃbɔːrd/", vi: "bảng điều khiển dữ liệu", sample: "The dashboard shows weekly performance." },
+    { term: "metric", ipa: "/ˈmetrɪk/", vi: "chỉ số", sample: "Which metric should we track first?" },
+    { term: "insight", ipa: "/ˈɪnsaɪt/", vi: "phát hiện/insight", sample: "The insight explains why users drop off." },
+    { term: "segment", ipa: "/ˈseɡmənt/", vi: "phân khúc", sample: "This customer segment has a higher conversion rate." },
+    { term: "baseline", ipa: "/ˈbeɪslaɪn/", vi: "mốc cơ sở", sample: "We need a baseline before measuring improvement." },
+    { term: "retention", ipa: "/rɪˈtenʃən/", vi: "tỷ lệ giữ chân", sample: "Retention improved after the onboarding update." },
+    { term: "forecast", ipa: "/ˈfɔːrkæst/", vi: "dự báo", sample: "The forecast shows demand may rise next month." },
+    { term: "outlier", ipa: "/ˈaʊtlaɪər/", vi: "điểm ngoại lệ", sample: "One outlier changed the average significantly." },
+    { term: "correlation", ipa: "/ˌkɔːrəˈleɪʃən/", vi: "mối tương quan", sample: "Correlation does not always mean causation." },
+    { term: "actionable", ipa: "/ˈækʃənəbl/", vi: "có thể hành động", sample: "A good insight should be actionable." }
+  ],
+  tourism: [
+    { term: "itinerary", ipa: "/aɪˈtɪnəreri/", vi: "lịch trình", sample: "I will send the itinerary this afternoon." },
+    { term: "booking", ipa: "/ˈbʊkɪŋ/", vi: "đặt dịch vụ", sample: "The booking includes airport pickup." },
+    { term: "departure", ipa: "/dɪˈpɑːrtʃər/", vi: "khởi hành", sample: "Departure is scheduled for 8 AM." },
+    { term: "accommodation", ipa: "/əˌkɑːməˈdeɪʃən/", vi: "chỗ ở", sample: "Accommodation is included in the package." },
+    { term: "local guide", ipa: "/ˈloʊkl ɡaɪd/", vi: "hướng dẫn viên địa phương", sample: "A local guide will meet the travelers at the station." },
+    { term: "travel insurance", ipa: "/ˈtrævl ɪnˈʃʊrəns/", vi: "bảo hiểm du lịch", sample: "Travel insurance is recommended for this trip." },
+    { term: "customized tour", ipa: "/ˈkʌstəmaɪzd tʊr/", vi: "tour cá nhân hóa", sample: "We can design a customized tour for your family." },
+    { term: "cancellation policy", ipa: "/ˌkænsəˈleɪʃən ˈpɑːləsi/", vi: "chính sách hủy", sample: "Please review the cancellation policy before payment." },
+    { term: "hidden gem", ipa: "/ˈhɪdn dʒem/", vi: "điểm đến ít người biết", sample: "This village is a hidden gem for food lovers." },
+    { term: "peak season", ipa: "/piːk ˈsiːzən/", vi: "mùa cao điểm", sample: "Prices are higher during peak season." }
+  ],
+  hotel: [
+    { term: "check-in", ipa: "/ˈtʃek ɪn/", vi: "nhận phòng", sample: "Check-in starts at 2 PM." },
+    { term: "housekeeping", ipa: "/ˈhaʊskiːpɪŋ/", vi: "buồng phòng", sample: "Housekeeping will prepare the room soon." },
+    { term: "occupancy", ipa: "/ˈɑːkjəpənsi/", vi: "tỷ lệ lấp phòng", sample: "Occupancy is high this weekend." },
+    { term: "amenity", ipa: "/əˈmenəti/", vi: "tiện nghi", sample: "The room includes a welcome amenity." },
+    { term: "upgrade", ipa: "/ˈʌpɡreɪd/", vi: "nâng hạng", sample: "We can offer a complimentary upgrade." },
+    { term: "late checkout", ipa: "/leɪt ˈtʃekaʊt/", vi: "trả phòng muộn", sample: "Late checkout is subject to availability." },
+    { term: "service recovery", ipa: "/ˈsɜːrvɪs rɪˈkʌvəri/", vi: "khắc phục dịch vụ", sample: "Service recovery can turn a complaint into loyalty." },
+    { term: "front desk", ipa: "/frʌnt desk/", vi: "lễ tân", sample: "Please contact the front desk for assistance." },
+    { term: "guest preference", ipa: "/ɡest ˈprefərəns/", vi: "sở thích của khách", sample: "Guest preferences should be added to the profile." },
+    { term: "room inventory", ipa: "/ruːm ˈɪnvəntɔːri/", vi: "tồn phòng", sample: "Room inventory changes quickly during holidays." }
+  ],
+  business: [
+    { term: "proposal", ipa: "/prəˈpoʊzəl/", vi: "đề xuất", sample: "The proposal should include pricing and next steps." },
+    { term: "pipeline", ipa: "/ˈpaɪplaɪn/", vi: "danh sách cơ hội", sample: "The sales pipeline looks healthy this quarter." },
+    { term: "follow-up", ipa: "/ˈfɑːloʊ ʌp/", vi: "theo dõi sau trao đổi", sample: "I will send a follow-up email after the meeting." },
+    { term: "stakeholder", ipa: "/ˈsteɪkhoʊldər/", vi: "bên liên quan", sample: "We need approval from the key stakeholder." },
+    { term: "deal", ipa: "/diːl/", vi: "thương vụ", sample: "The deal may close next week." },
+    { term: "scope", ipa: "/skoʊp/", vi: "phạm vi", sample: "The project scope should be clear before signing." },
+    { term: "timeline", ipa: "/ˈtaɪmlaɪn/", vi: "mốc thời gian", sample: "Can we confirm the timeline today?" },
+    { term: "value proposition", ipa: "/ˈvæljuː ˌprɑːpəˈzɪʃən/", vi: "giá trị đề xuất", sample: "The value proposition must be clear to the client." },
+    { term: "negotiation", ipa: "/nɪˌɡoʊʃiˈeɪʃən/", vi: "đàm phán", sample: "Negotiation starts after the client reviews the proposal." },
+    { term: "renewal", ipa: "/rɪˈnuːəl/", vi: "gia hạn", sample: "The renewal discussion is scheduled for Monday." }
+  ],
+  marketing: [
+    { term: "campaign", ipa: "/kæmˈpeɪn/", vi: "chiến dịch", sample: "The campaign will launch next Monday." },
+    { term: "audience", ipa: "/ˈɔːdiəns/", vi: "đối tượng mục tiêu", sample: "The audience prefers short video content." },
+    { term: "engagement", ipa: "/ɪnˈɡeɪdʒmənt/", vi: "tương tác", sample: "Engagement increased after the headline changed." },
+    { term: "lead", ipa: "/liːd/", vi: "khách hàng tiềm năng", sample: "This ad generated twenty qualified leads." },
+    { term: "brand message", ipa: "/brænd ˈmesɪdʒ/", vi: "thông điệp thương hiệu", sample: "The brand message should be simple and memorable." },
+    { term: "content calendar", ipa: "/ˈkɑːntent ˈkæləndər/", vi: "lịch nội dung", sample: "The content calendar needs two posts per week." },
+    { term: "conversion", ipa: "/kənˈvɜːrʒən/", vi: "chuyển đổi", sample: "Conversion improved after we simplified the form." },
+    { term: "positioning", ipa: "/pəˈzɪʃənɪŋ/", vi: "định vị", sample: "Positioning helps customers understand why we are different." },
+    { term: "call to action", ipa: "/kɔːl tuː ˈækʃən/", vi: "lời kêu gọi hành động", sample: "The call to action should be visible above the fold." },
+    { term: "organic reach", ipa: "/ɔːrˈɡænɪk riːtʃ/", vi: "lượt tiếp cận tự nhiên", sample: "Organic reach is lower, so the content must be more useful." }
+  ]
+};
+
+const levelPowerWords = [
+  [{ term: "task", ipa: "/tæsk/", vi: "nhiệm vụ", sample: "This task is simple and clear." }, { term: "help", ipa: "/help/", vi: "giúp đỡ", sample: "Could you help me with this task?" }],
+  [{ term: "update", ipa: "/ˈʌpdeɪt/", vi: "cập nhật", sample: "I need a quick update." }, { term: "confirm", ipa: "/kənˈfɜːrm/", vi: "xác nhận", sample: "Please confirm the time." }],
+  [{ term: "request", ipa: "/rɪˈkwest/", vi: "yêu cầu", sample: "This is a polite request." }, { term: "deadline", ipa: "/ˈdedlaɪn/", vi: "hạn chót", sample: "The deadline is Friday." }],
+  [{ term: "progress", ipa: "/ˈprɑːɡres/", vi: "tiến độ", sample: "The progress is on track." }, { term: "issue", ipa: "/ˈɪʃuː/", vi: "vấn đề", sample: "We found one small issue." }],
+  [{ term: "context", ipa: "/ˈkɑːntekst/", vi: "bối cảnh", sample: "For context, the client changed the timeline." }, { term: "priority", ipa: "/praɪˈɔːrəti/", vi: "ưu tiên", sample: "The priority is customer satisfaction." }],
+  [{ term: "recap", ipa: "/ˈriːkæp/", vi: "tóm tắt sau họp", sample: "I will send the recap after the meeting." }, { term: "action item", ipa: "/ˈækʃən ˈaɪtəm/", vi: "việc cần làm", sample: "Each action item needs an owner." }],
+  [{ term: "recommendation", ipa: "/ˌrekəmenˈdeɪʃən/", vi: "đề xuất", sample: "My recommendation is based on the data." }, { term: "impact", ipa: "/ˈɪmpækt/", vi: "tác động", sample: "We should measure the impact next week." }],
+  [{ term: "trade-off", ipa: "/ˈtreɪd ɔːf/", vi: "sự đánh đổi", sample: "The trade-off is speed versus quality." }, { term: "alignment", ipa: "/əˈlaɪnmənt/", vi: "sự thống nhất", sample: "We need alignment before the launch." }],
+  [{ term: "implication", ipa: "/ˌɪmplɪˈkeɪʃən/", vi: "hàm ý", sample: "The implication is important for the next decision." }, { term: "executive summary", ipa: "/ɪɡˈzekjətɪv ˈsʌməri/", vi: "tóm tắt cho lãnh đạo", sample: "The executive summary should be concise." }],
+  [{ term: "strategic", ipa: "/strəˈtiːdʒɪk/", vi: "mang tính chiến lược", sample: "This is a strategic decision." }, { term: "mitigation", ipa: "/ˌmɪtɪˈɡeɪʃən/", vi: "giảm thiểu rủi ro", sample: "Risk mitigation should be part of the plan." }]
+];
+
+const blueprintVocabularyBank = {
+  "intro-networking": [
+    { term: "responsibility", ipa: "/rɪˌspɑːnsəˈbɪləti/", vi: "trách nhiệm", sample: "My main responsibility is coordinating requests." },
+    { term: "background", ipa: "/ˈbækɡraʊnd/", vi: "nền tảng/kinh nghiệm", sample: "Could you tell me about your background?" }
+  ],
+  "email-chat": [
+    { term: "subject line", ipa: "/ˈsʌbdʒekt laɪn/", vi: "tiêu đề email", sample: "The subject line should be specific." },
+    { term: "attachment", ipa: "/əˈtætʃmənt/", vi: "tệp đính kèm", sample: "Please review the attachment." }
+  ],
+  "hybrid-meetings": [
+    { term: "turn-taking", ipa: "/tɜːrn ˈteɪkɪŋ/", vi: "lượt nói", sample: "Turn-taking is important in hybrid meetings." },
+    { term: "clarify", ipa: "/ˈklerəfaɪ/", vi: "làm rõ", sample: "Could you clarify the next step?" }
+  ],
+  "ai-prompts": [
+    { term: "constraint", ipa: "/kənˈstreɪnt/", vi: "ràng buộc", sample: "Add a word limit as a constraint." },
+    { term: "format", ipa: "/ˈfɔːrmæt/", vi: "định dạng", sample: "Return the answer in table format." }
+  ],
+  "data-storytelling": [
+    { term: "trend", ipa: "/trend/", vi: "xu hướng", sample: "The trend is positive this quarter." },
+    { term: "finding", ipa: "/ˈfaɪndɪŋ/", vi: "phát hiện", sample: "The main finding is easy to explain." }
+  ],
+  "service-negotiation": [
+    { term: "empathy", ipa: "/ˈempəθi/", vi: "sự đồng cảm", sample: "Empathy helps reduce customer frustration." },
+    { term: "alternative", ipa: "/ɔːlˈtɜːrnətɪv/", vi: "phương án thay thế", sample: "We can offer an alternative solution." }
+  ],
+  "feedback-leadership": [
+    { term: "constructive", ipa: "/kənˈstrʌktɪv/", vi: "mang tính xây dựng", sample: "Constructive feedback focuses on behavior." },
+    { term: "perspective", ipa: "/pərˈspektɪv/", vi: "góc nhìn", sample: "I would like to add another perspective." }
+  ],
+  "career-growth": [
+    { term: "achievement", ipa: "/əˈtʃiːvmənt/", vi: "thành tựu", sample: "One achievement I am proud of is reducing manual work." },
+    { term: "transferable skill", ipa: "/trænsˈfɜːrəbl skɪl/", vi: "kỹ năng chuyển đổi", sample: "Communication is a transferable skill." }
+  ]
+};
+
 function clampLevel(value) {
   const number = Number(value);
   if (!Number.isFinite(number)) return 1;
@@ -309,6 +445,107 @@ function buildPhrases(field, level) {
   return phrases;
 }
 
+function rotateItems(items, start, count) {
+  if (!items.length) return [];
+  return Array.from({ length: count }, (_, index) => items[(start + index) % items.length]);
+}
+
+function buildVocabulary(field, level, blueprint) {
+  const fieldWords = fieldVocabularyBank[field.id] || fieldVocabularyBank.business;
+  const start = (level.level + blueprint.id.length) % fieldWords.length;
+  const selectedFieldWords = rotateItems(fieldWords, start, 5).map((item) => ({ ...item, group: "Field vocabulary", groupVi: "Từ vựng theo lĩnh vực" }));
+  const powerWords = (levelPowerWords[level.level - 1] || levelPowerWords[0]).map((item) => ({ ...item, group: `Level ${level.level} power words`, groupVi: `Từ trọng tâm Level ${level.level}` }));
+  const skillWords = (blueprintVocabularyBank[blueprint.id] || []).map((item) => ({ ...item, group: blueprint.skill, groupVi: "Từ theo kỹ năng" }));
+  return [...selectedFieldWords, ...powerWords, ...skillWords];
+}
+
+function buildScenario(field, level, blueprint) {
+  const scenarioByLevel = level.level <= 3
+    ? {
+        en: `You need to ask a teammate for a simple update about the ${field.item}. Keep your message short, friendly, and clear.`,
+        vi: `Bạn cần hỏi đồng nghiệp một cập nhật đơn giản về ${field.itemVi}. Hãy viết ngắn, thân thiện và rõ.`
+      }
+    : level.level <= 6
+      ? {
+          en: `Your team is preparing the ${field.project}. You must give context, request one update, and confirm the next step before the deadline.`,
+          vi: `Đội của bạn đang chuẩn bị ${field.projectVi}. Bạn cần nêu bối cảnh, yêu cầu một cập nhật và xác nhận bước tiếp theo trước hạn.`
+        }
+      : level.level <= 8
+        ? {
+            en: `A stakeholder is unsure about the ${field.project}. Use one metric, one recommendation, and one risk-control step to explain your position.`,
+            vi: `Một bên liên quan còn phân vân về ${field.projectVi}. Hãy dùng một chỉ số, một đề xuất và một bước kiểm soát rủi ro để trình bày quan điểm.`
+          }
+        : {
+            en: `You are briefing senior stakeholders about the ${field.project}. Balance speed, quality, customer expectations, and measurable impact in a concise executive message.`,
+            vi: `Bạn đang trình bày cho quản lý cấp cao về ${field.projectVi}. Cần cân bằng tốc độ, chất lượng, kỳ vọng khách hàng và tác động đo lường được trong một thông điệp ngắn gọn.`
+          };
+
+  return {
+    ...scenarioByLevel,
+    focusEn: `${blueprint.titleEn}: ${blueprint.goal}.`,
+    focusVi: `${blueprint.titleVi}: ${blueprint.goalVi}.`
+  };
+}
+
+function buildMiniDialogue(field, level, blueprint) {
+  const request = level.level <= 4
+    ? `Could you please update me on the ${field.item}?`
+    : `Could you share the latest status of the ${field.item} and flag any risk before 4 PM?`;
+  const response = level.level <= 4
+    ? `Sure. I’ll send a short update today.`
+    : `Sure. The main risk is timing, but I’ll include a recommendation and the next action item.`;
+  const close = level.level <= 6
+    ? `Great. I’ll use it for the ${field.project}.`
+    : `Thanks. I’ll align it with ${field.metric} and send a concise summary to ${field.stakeholder}.`;
+
+  return [
+    { speaker: "You", en: request, vi: level.level <= 4 ? `Bạn vui lòng cập nhật cho tôi về ${field.itemVi} được không?` : `Bạn có thể chia sẻ tình trạng mới nhất của ${field.itemVi} và báo rủi ro trước 4 giờ chiều không?` },
+    { speaker: "Teammate", en: response, vi: level.level <= 4 ? `Được. Tôi sẽ gửi cập nhật ngắn hôm nay.` : `Được. Rủi ro chính là thời gian, nhưng tôi sẽ kèm đề xuất và việc cần làm tiếp theo.` },
+    { speaker: "You", en: close, vi: level.level <= 6 ? `Tốt. Tôi sẽ dùng thông tin đó cho ${field.projectVi}.` : `Cảm ơn. Tôi sẽ liên kết với ${field.metricVi} và gửi bản tóm tắt ngắn cho ${field.stakeholder}.` }
+  ];
+}
+
+function buildPracticeTasks(field, level, blueprint) {
+  return [
+    {
+      titleEn: "Listen & repeat",
+      titleVi: "Nghe và lặp lại",
+      en: `Listen to the vocabulary and repeat each word twice. Then read the sample sentence about ${field.item}.`,
+      vi: `Nghe từ vựng và lặp lại mỗi từ 2 lần. Sau đó đọc câu ví dụ về ${field.itemVi}.`
+    },
+    {
+      titleEn: "Speak",
+      titleVi: "Nói",
+      en: `Record yourself giving a ${level.output} about the ${field.project}. Use at least three new vocabulary items.`,
+      vi: `Tự ghi âm phần nói ${level.output} về ${field.projectVi}. Dùng ít nhất 3 từ vựng mới.`
+    },
+    {
+      titleEn: "Write",
+      titleVi: "Viết",
+      en: `Write a short workplace message using: context, request, deadline, and next step. Topic: ${blueprint.titleEn} in ${field.labelEn}.`,
+      vi: `Viết một tin nhắn công việc ngắn có: bối cảnh, yêu cầu, hạn chót và bước tiếp theo. Chủ đề: ${blueprint.titleVi} trong lĩnh vực ${field.label}.`
+    }
+  ];
+}
+
+function buildExpansionNotes(field, level, blueprint) {
+  const notes = [
+    {
+      en: `Use one clear purpose: ask, update, recommend, or confirm. Do not mix too many goals in one message.`,
+      vi: `Dùng một mục đích rõ: hỏi, cập nhật, đề xuất hoặc xác nhận. Không trộn quá nhiều mục tiêu trong một tin nhắn.`
+    },
+    {
+      en: `For ${field.labelEn}, connect your English to a real work object: ${field.item}, ${field.project}, or ${field.metric}.`,
+      vi: `Với ${field.label}, hãy gắn tiếng Anh với một đối tượng công việc thật: ${field.itemVi}, ${field.projectVi} hoặc ${field.metricVi}.`
+    },
+    {
+      en: level.level >= 7 ? `At this level, add evidence: data, risk, trade-off, and recommendation.` : `At this level, focus on accuracy, polite tone, and simple sentence order.`,
+      vi: level.level >= 7 ? `Ở level này, hãy thêm bằng chứng: dữ liệu, rủi ro, đánh đổi và đề xuất.` : `Ở level này, hãy tập trung vào độ chính xác, giọng lịch sự và trật tự câu đơn giản.`
+    }
+  ];
+  return notes;
+}
+
 function buildQuestions(field, level, blueprint) {
   const difficultyQuestion = level.level >= 7
     ? `Which sentence gives the clearest recommendation for ${field.labelEn}?`
@@ -326,6 +563,10 @@ function buildQuestions(field, level, blueprint) {
         `This ${field.item} is not my problem.`
       ];
 
+  const vocab = buildVocabulary(field, level, blueprint);
+  const keyWord = vocab[0] || { term: field.item, vi: field.itemVi, sample: `Please update me on the ${field.item}.` };
+  const secondWord = vocab[1] || { term: field.project, vi: field.projectVi };
+
   return [
     {
       q: difficultyQuestion,
@@ -342,6 +583,26 @@ function buildQuestions(field, level, blueprint) {
       ],
       answer: 0,
       explain: "Câu đúng lịch sự, có việc cụ thể và hạn thời gian rõ."
+    },
+    {
+      q: `What does "${keyWord.term}" mean in Vietnamese?`,
+      options: [
+        keyWord.vi,
+        secondWord.vi || field.projectVi,
+        "không liên quan đến công việc"
+      ],
+      answer: 0,
+      explain: `"${keyWord.term}" nghĩa là "${keyWord.vi}". Hãy bấm loa để luyện cách đọc.`
+    },
+    {
+      q: `Which sentence uses "${keyWord.term}" naturally?`,
+      options: [
+        keyWord.sample || `Please update me on the ${keyWord.term}.`,
+        `${keyWord.term} very yes today.`,
+        `I am ${keyWord.term} the yesterday quickly.`
+      ],
+      answer: 0,
+      explain: "Câu đúng dùng từ vựng trong một ngữ cảnh công việc tự nhiên."
     },
     {
       q: `Translate: "Tôi đề xuất cải thiện ${field.projectVi}."`,
@@ -414,6 +675,11 @@ function buildLessons(fieldId, levelNumber) {
       goalVi: `Ở ${level.name}, bạn sẽ ${blueprint.goalVi} trong bối cảnh ${field.contextVi}.`,
       grammar: buildGrammar(field, level),
       phrases: buildPhrases(field, level),
+      vocabulary: buildVocabulary(field, level, blueprint),
+      scenario: buildScenario(field, level, blueprint),
+      miniDialogue: buildMiniDialogue(field, level, blueprint),
+      practiceTasks: buildPracticeTasks(field, level, blueprint),
+      expansionNotes: buildExpansionNotes(field, level, blueprint),
       exampleEn: example.en,
       exampleVi: example.vi,
       exerciseIntro: `Hoàn thành bài tập ${field.label} ở Level ${level.level}: mục tiêu là ${level.taskVi}.`,
@@ -501,8 +767,67 @@ function recordStudyEvent({ type, lessonTitle, score }) {
   state.progress.studyHistory = state.progress.studyHistory.slice(0, 120);
 }
 
+function stripHtml(value = "") {
+  const template = document.createElement("template");
+  template.innerHTML = String(value).replaceAll("<br>", " ");
+  return (template.content.textContent || "").replace(/\s+/g, " ").trim();
+}
+
+function escapeHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function speakButton(text, label = "Listen in American English") {
+  const cleanText = stripHtml(text);
+  if (!cleanText) return "";
+  return `<button class="speak-btn" type="button" data-speak="${escapeHtml(cleanText)}" aria-label="${label}" title="Nghe giọng Mỹ">🔊</button>`;
+}
+
 function bilingual(en, vi, tag = "span") {
-  return `<${tag} class="en">${en}</${tag}><${tag} class="vi">${vi}</${tag}>`;
+  return `<${tag} class="en speakable-text">${en} ${speakButton(en)}</${tag}><${tag} class="vi">${vi}</${tag}>`;
+}
+
+function chooseAmericanVoice() {
+  if (!("speechSynthesis" in window)) return null;
+  const voices = window.speechSynthesis.getVoices();
+  const americanVoices = voices.filter((voice) => /en-US/i.test(voice.lang));
+  const preferred = /(Samantha|Jenny|Aria|Zira|Joanna|Salli|Female|Google US English|Microsoft.*Natural)/i;
+  return americanVoices.find((voice) => preferred.test(voice.name)) || americanVoices[0] || voices.find((voice) => /^en/i.test(voice.lang)) || null;
+}
+
+function speakAmericanEnglish(text) {
+  if (!("speechSynthesis" in window)) {
+    alert("Trình duyệt này chưa hỗ trợ đọc văn bản. Hãy thử Chrome, Edge hoặc Safari bản mới.");
+    return;
+  }
+  const cleanText = String(text || "").replace(/\s+/g, " ").trim();
+  if (!cleanText) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(cleanText);
+  utterance.lang = "en-US";
+  utterance.voice = chooseAmericanVoice();
+  utterance.rate = 0.88;
+  utterance.pitch = 0.82;
+  utterance.volume = 1;
+  window.speechSynthesis.speak(utterance);
+}
+
+function setupSpeechControls() {
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.onvoiceschanged = () => chooseAmericanVoice();
+  }
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-speak]");
+    if (!button) return;
+    event.preventDefault();
+    event.stopPropagation();
+    speakAmericanEnglish(button.dataset.speak);
+  });
 }
 
 function getLesson(id) {
@@ -518,89 +843,122 @@ function rebuildLessons() {
   saveProgress();
 }
 
-function showFieldGate(show = true) {
-  const fieldGate = document.getElementById("fieldGate");
-  if (!fieldGate) return;
-  fieldGate.classList.toggle("hidden", !show);
-  if (show) renderFieldOptions();
+function toggleReadme(show) {
+  const view = document.getElementById("readmeView");
+  if (!view) return;
+  view.classList.toggle("hidden", !show);
+  view.setAttribute("aria-hidden", show ? "false" : "true");
+  document.body.classList.toggle("readme-open", show);
+  if (show) view.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (!show) document.getElementById("top")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function updateFieldBadge() {
-  const badge = document.getElementById("currentFieldBadge");
-  const title = document.getElementById("fieldPickerTitle");
-  const field = getFieldProfile(state.currentField);
-  if (badge) badge.textContent = `Lĩnh vực hiện tại: ${field.label}`;
-  if (title) title.textContent = `Hôm nay học: ${field.label}`;
-}
-
-function renderFieldOptions() {
-  const grid = document.getElementById("fieldOptions");
-  if (!grid) return;
-  grid.innerHTML = Object.values(fieldProfiles).map((field) => `
-    <button class="field-option ${field.id === state.currentField ? "active" : ""}" type="button" data-field-id="${field.id}">
-      <strong>${field.label}</strong>
-      <span>${field.labelEn}</span>
-      <small>${field.contextVi}</small>
-    </button>
-  `).join("");
-  grid.querySelectorAll(".field-option").forEach((button) => {
-    button.addEventListener("click", () => selectField(button.dataset.fieldId));
+function setupReadmeControls() {
+  ["openReadmeBtn", "openReadmeInlineBtn", "openReadmeNavBtn"].forEach((id) => {
+    document.getElementById(id)?.addEventListener("click", () => toggleReadme(true));
+  });
+  document.getElementById("readmeBackBtn")?.addEventListener("click", () => toggleReadme(false));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") toggleReadme(false);
   });
 }
 
-function selectField(fieldId) {
+function updateFieldBadge() {
+  const field = getFieldProfile(state.currentField);
+  const level = getLevelProfile(state.currentLevel);
+  const badge = document.getElementById("currentSelectionBadge");
+  const title = document.getElementById("studyPickerTitle");
+  const text = document.getElementById("studyPickerText");
+  const toggleText = document.getElementById("studyMenuToggleText");
+  if (badge) badge.textContent = `${field.label} • Level ${level.level} • ${level.name}`;
+  if (title) title.textContent = `Hôm nay học: ${field.label} • Level ${level.level}`;
+  if (text) text.textContent = `Giáo án đang dùng lĩnh vực ${field.label} ở ${level.name} (${level.cefr}). Chọn box để đổi lĩnh vực hoặc level.`;
+  if (toggleText) toggleText.textContent = `Đổi lĩnh vực/level: ${field.label} • Level ${level.level}`;
+}
+
+function toggleStudyMenu(show) {
+  const panel = document.getElementById("fieldOptions");
+  const button = document.getElementById("studyMenuToggle");
+  if (!panel || !button) return;
+  const shouldShow = typeof show === "boolean" ? show : panel.classList.contains("hidden");
+  panel.classList.toggle("hidden", !shouldShow);
+  button.setAttribute("aria-expanded", shouldShow ? "true" : "false");
+}
+
+function renderFieldOptions() {
+  const panel = document.getElementById("fieldOptions");
+  if (!panel) return;
+  panel.innerHTML = Object.values(fieldProfiles).map((field) => {
+    const isActiveField = field.id === state.currentField;
+    return `
+      <article class="study-field ${isActiveField ? "open active" : ""}" data-field-wrapper="${field.id}">
+        <button class="study-field-toggle" type="button" data-toggle-field="${field.id}" aria-expanded="${isActiveField ? "true" : "false"}">
+          <span>
+            <strong>${field.label}</strong>
+            <small>${field.labelEn} • ${field.contextVi}</small>
+          </span>
+          <span aria-hidden="true">▾</span>
+        </button>
+        <div class="nested-levels">
+          ${levelProfiles.map((level) => `
+            <button class="level-chip ${isActiveField && level.level === state.currentLevel ? "active" : ""}" type="button" data-field-id="${field.id}" data-level="${level.level}">
+              <strong>Level ${level.level}</strong>
+              <span>${level.name} • ${level.cefr}</span>
+            </button>
+          `).join("")}
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  panel.querySelectorAll("[data-toggle-field]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const wrapper = panel.querySelector(`[data-field-wrapper="${button.dataset.toggleField}"]`);
+      const expanded = wrapper?.classList.toggle("open");
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
+  });
+
+  panel.querySelectorAll("[data-field-id][data-level]").forEach((button) => {
+    button.addEventListener("click", () => selectFieldLevel(button.dataset.fieldId, button.dataset.level));
+  });
+}
+
+function selectFieldLevel(fieldId, level) {
   state.currentField = fieldId;
+  state.currentLevel = clampLevel(level);
   rebuildLessons();
-  showFieldGate(false);
   renderQuizSelectors();
   renderQuiz();
   renderAll();
-  document.getElementById("levelPicker")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  toggleStudyMenu(false);
+  document.getElementById("lessons")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function selectField(fieldId) {
+  selectFieldLevel(fieldId, state.currentLevel);
+}
+
+function selectLevel(level) {
+  selectFieldLevel(state.currentField, level);
 }
 
 function setupFieldControls() {
-  document.getElementById("changeFieldBtn")?.addEventListener("click", () => showFieldGate(true));
-  document.getElementById("closeFieldGateBtn")?.addEventListener("click", () => showFieldGate(false));
+  document.getElementById("studyMenuToggle")?.addEventListener("click", () => toggleStudyMenu());
   renderFieldOptions();
   updateFieldBadge();
 }
 
 function updateLevelBadge() {
-  const level = getLevelProfile(state.currentLevel);
-  const badge = document.getElementById("currentLevelBadge");
-  const text = document.getElementById("levelPickerText");
-  if (badge) badge.textContent = `Level ${level.level} • ${level.name} • ${level.cefr}`;
-  if (text) text.textContent = `Mục tiêu: ${level.taskVi}. Đầu ra gợi ý: ${level.output}. Ngữ pháp trọng tâm: ${level.grammar}.`;
+  updateFieldBadge();
 }
 
 function renderLevelOptions() {
-  const grid = document.getElementById("levelOptions");
-  if (!grid) return;
-  grid.innerHTML = levelProfiles.map((level) => `
-    <button class="level-option ${level.level === state.currentLevel ? "active" : ""}" type="button" data-level="${level.level}">
-      <strong>Level ${level.level}</strong>
-      <span>${level.name} • ${level.cefr}</span>
-      <small>${level.taskVi}</small>
-    </button>
-  `).join("");
-  grid.querySelectorAll(".level-option").forEach((button) => {
-    button.addEventListener("click", () => selectLevel(button.dataset.level));
-  });
-}
-
-function selectLevel(level) {
-  state.currentLevel = clampLevel(level);
-  rebuildLessons();
-  renderLevelOptions();
-  renderQuizSelectors();
-  renderQuiz();
-  renderAll();
-  document.getElementById("lessons")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  renderFieldOptions();
 }
 
 function setupLevelControls() {
-  renderLevelOptions();
-  updateLevelBadge();
+  updateFieldBadge();
 }
 
 function dailySeed() {
@@ -655,8 +1013,8 @@ function renderLessonCards() {
       <button class="lesson-card ${lesson.id === state.currentLessonId ? "active" : ""}" type="button" data-lesson-id="${lesson.id}">
         <span class="lesson-number">${String(index + 1).padStart(2, "0")}</span>
         <span>
-          <h4>${lesson.titleVi}</h4>
-          <p>${lesson.titleEn} • ${lesson.level} • ${lesson.minutes} phút</p>
+          <h4><span class="en">${lesson.titleEn}</span><span class="vi">${lesson.titleVi}</span></h4>
+          <p>${lesson.level} • ${lesson.minutes} phút</p>
         </span>
         <span class="status-pill ${done ? "done" : ""}">${done ? "✓ Done" : `${score}%`}</span>
       </button>
@@ -700,13 +1058,56 @@ function renderLessonDetail() {
       <div class="content-grid">
         <div class="info-card">
           <h3>Mẫu câu chính</h3>
-          <ul>${lesson.grammar.map((item) => `<li>${item}</li>`).join("")}</ul>
+          <ul>${lesson.grammar.map((item) => `<li><span class="en-line">${item}</span> ${speakButton(item)}</li>`).join("")}</ul>
         </div>
         <div class="info-card">
           <h3>Cụm từ nên nhớ</h3>
           <div class="phrase-list">
             ${lesson.phrases.map((phrase) => `
-              <div class="phrase"><strong>${phrase.en}</strong><span>${phrase.vi}</span></div>
+              <div class="phrase"><strong>${phrase.en} ${speakButton(phrase.en)}</strong><span class="vi">${phrase.vi}</span></div>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card vocabulary-card">
+        <div class="card-heading-row">
+          <div>
+            <h3>Từ vựng mới + cách đọc</h3>
+            <p class="lesson-note">Bấm loa để nghe từng từ/câu ví dụ bằng giọng English - American. Phần phiên âm giúp bạn nhìn cách đọc trước khi nghe.</p>
+          </div>
+          <span class="badge">${lesson.vocabulary.length} từ/cụm từ</span>
+        </div>
+        <div class="vocab-grid">
+          ${lesson.vocabulary.map((word) => `
+            <article class="vocab-item">
+              <div class="vocab-topline">
+                <strong>${word.term}</strong>
+                ${speakButton(`${word.term}. ${word.sample}`)}
+              </div>
+              <span class="ipa">${word.ipa}</span>
+              <span class="vi vocab-meaning">${word.vi}</span>
+              <small>${word.group}</small>
+              <p class="en-line">${word.sample} ${speakButton(word.sample)}</p>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="content-grid expanded-learning-grid">
+        <div class="info-card">
+          <h3>Tình huống học hôm nay</h3>
+          <p>${bilingual(lesson.scenario.en, lesson.scenario.vi)}</p>
+          <p>${bilingual(lesson.scenario.focusEn, lesson.scenario.focusVi)}</p>
+        </div>
+        <div class="info-card">
+          <h3>Mini dialogue</h3>
+          <div class="dialogue-list">
+            ${lesson.miniDialogue.map((line) => `
+              <div class="dialogue-line">
+                <strong>${line.speaker}</strong>
+                <p>${bilingual(line.en, line.vi)}</p>
+              </div>
             `).join("")}
           </div>
         </div>
@@ -717,17 +1118,35 @@ function renderLessonDetail() {
         <p>${bilingual(lesson.exampleEn.replaceAll("\n", "<br>"), lesson.exampleVi.replaceAll("\n", "<br>"))}</p>
       </div>
 
+      <div class="content-grid expanded-learning-grid">
+        <div class="info-card practice-card">
+          <h3>Luyện thêm: nghe • nói • viết</h3>
+          <div class="practice-list">
+            ${lesson.practiceTasks.map((task) => `
+              <article class="practice-item">
+                <strong><span class="en">${task.titleEn}</span><span class="vi">${task.titleVi}</span></strong>
+                <p>${bilingual(task.en, task.vi)}</p>
+              </article>
+            `).join("")}
+          </div>
+        </div>
+        <div class="info-card">
+          <h3>Ghi nhớ để nâng level</h3>
+          <ul>${lesson.expansionNotes.map((note) => `<li>${bilingual(note.en, note.vi)}</li>`).join("")}</ul>
+        </div>
+      </div>
+
       <div class="exercise-card">
         <h3>Bài tập bắt buộc</h3>
         <p class="lesson-note">${lesson.exerciseIntro} Làm xong bấm <strong>Nộp bài</strong>. Đạt từ 60% trở lên sẽ được tính là hoàn thành bài.</p>
         <form class="exercise-form" id="lessonExerciseForm">
           ${lesson.questions.map((question, index) => `
             <div class="exercise-question">
-              <p><strong>Câu ${index + 1}.</strong> ${question.q}</p>
+              <p><strong>Câu ${index + 1}.</strong> <span class="en-line">${question.q}</span> ${speakButton(question.q)}</p>
               ${question.options.map((option, optionIndex) => `
                 <label class="option-line">
                   <input type="radio" name="lesson-${lesson.id}-${index}" value="${optionIndex}" required />
-                  <span>${option}</span>
+                  <span>${option} ${speakButton(option)}</span>
                 </label>
               `).join("")}
             </div>
@@ -785,11 +1204,11 @@ function renderQuiz() {
     <form id="quizForm">
       ${lesson.questions.map((question, index) => `
         <div class="quiz-question">
-          <h4>${index + 1}. ${question.q}</h4>
+          <h4>${index + 1}. <span class="en-line">${question.q}</span> ${speakButton(question.q)}</h4>
           ${question.options.map((option, optionIndex) => `
             <label class="option-line">
               <input type="radio" name="quiz-${lesson.id}-${index}" value="${optionIndex}" required />
-              <span>${option}</span>
+              <span>${option} ${speakButton(option)}</span>
             </label>
           `).join("")}
         </div>
@@ -875,10 +1294,12 @@ function renderStats() {
 function setupLanguageControls() {
   document.querySelectorAll("[data-lang-option]").forEach((button) => {
     button.addEventListener("click", () => {
-      state.lang = button.dataset.langOption;
+      state.lang = button.dataset.langOption === "en" ? "en" : "both";
       document.body.dataset.lang = state.lang;
+      document.documentElement.lang = state.lang === "en" ? "en" : "vi";
       document.querySelectorAll("[data-lang-option]").forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
+      renderAll();
     });
   });
 }
@@ -1038,6 +1459,8 @@ function renderAll() {
 }
 
 function init() {
+  setupReadmeControls();
+  setupSpeechControls();
   setupFieldControls();
   setupLevelControls();
   setupDailyUpdate();
