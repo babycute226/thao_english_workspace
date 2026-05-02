@@ -74,32 +74,21 @@
       </div>
     </nav>
 
-    <section class="toolbar glass" aria-label="Learning controls">
-      <div>
+    <section class="toolbar top-learning-controls glass" aria-label="Learning controls">
+      <div class="language-control">
         <span class="label">Ngôn ngữ / Language</span>
         <div class="segmented" role="group" aria-label="Language mode">
           <button type="button" class="active" data-lang-option="both">Anh - Việt</button>
           <button type="button" data-lang-option="en">English</button>
         </div>
       </div>
-      <div>
+      <div class="daily-goal-control">
         <span class="label">Mục tiêu mỗi ngày</span>
         <select id="dailyGoalSelect" aria-label="Daily goal">
           <option value="1">1 bài / ngày</option>
           <option value="2">2 bài / ngày</option>
           <option value="3">3 bài / ngày</option>
         </select>
-      </div>
-      <div class="music-box">
-        <span class="label">Nhạc nền YouTube</span>
-        <div class="music-controls">
-          <button class="icon-btn" id="musicToggleBtn" type="button" aria-label="Bật tắt nhạc">▶</button>
-          <select id="trackSelect" aria-label="Chọn nhạc nền"></select>
-          <label class="volume-label">Âm lượng
-            <input id="volumeSlider" type="range" min="0" max="100" value="35" />
-          </label>
-        </div>
-        <div id="youtubePlayer" class="youtube-player" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -138,6 +127,28 @@
           </div>
           <p id="vibeText">Mỗi 60 phút, giao diện tự đổi hình nền và mood để giảm nhàm chán.</p>
           <div class="countdown"><span id="vibeCountdown">60:00</span> đến lần đổi tiếp theo</div>
+        </div>
+        <div class="music-box music-under-vibe" aria-label="Nhạc nền YouTube">
+          <div class="music-headline">
+            <div>
+              <span class="label">Nhạc nền YouTube</span>
+              <p id="musicStatus">Chọn track hoặc bấm ngẫu nhiên, sau đó bấm ▶ để phát.</p>
+            </div>
+            <button class="secondary-btn compact-btn" id="randomTrackBtn" type="button">Ngẫu nhiên</button>
+          </div>
+          <div class="music-controls">
+            <button class="icon-btn" id="musicToggleBtn" type="button" aria-label="Bật tắt nhạc">▶</button>
+            <select id="trackSelect" aria-label="Chọn nhạc nền"></select>
+            <label class="volume-label">Âm lượng
+              <input id="volumeSlider" type="range" min="0" max="100" value="35" />
+            </label>
+          </div>
+          <div class="mobile-audio-tools">
+            <button class="secondary-btn compact-btn" id="unlockAudioBtn" type="button">Bật âm thanh trên điện thoại</button>
+            <a class="secondary-btn compact-btn" id="openYouTubeLink" href="https://www.youtube.com/watch?v=jfKfPfyJRdk" target="_blank" rel="noopener">Mở YouTube</a>
+          </div>
+          <p class="mobile-audio-note">Trên điện thoại, hãy bấm “Bật âm thanh” một lần rồi bấm ▶. Nếu trình duyệt chặn iframe, dùng nút “Mở YouTube”.</p>
+          <div id="youtubePlayer" class="youtube-player" aria-label="YouTube background music player"></div>
         </div>
       </aside>
     </section>
@@ -250,7 +261,6 @@
     <a href="#top">Lên đầu trang ↑</a>
   </footer>
 
-  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js"></script>
 </body>
 </html>
