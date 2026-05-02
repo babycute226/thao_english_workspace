@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work English 2026 | Giáo trình tiếng Anh cho người đi làm</title>
-  <meta name="description" content="Trang web tự học tiếng Anh cho người đi làm: song ngữ Anh/Việt, phát âm Mỹ từng câu, bài học cập nhật liên tục, Google login, chấm điểm, theo dõi tiến bộ và lịch nhắc học." />
+  <meta name="description" content="Trang web tự học tiếng Anh cho người đi làm: song ngữ Anh/Việt, bài tập, quiz, chấm điểm, theo dõi tiến bộ và nhạc nền YouTube." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,6 +14,21 @@
   <div class="ambient-orb orb-one"></div>
   <div class="ambient-orb orb-two"></div>
   <div class="ambient-orb orb-three"></div>
+
+
+  <section class="field-gate hidden" id="fieldGate" aria-label="Chọn lĩnh vực học hôm nay">
+    <div class="modal-card field-card glass">
+      <div class="field-card-head">
+        <div>
+          <span class="eyebrow">Today learning plan</span>
+          <h2>Bạn muốn học gì hôm nay?</h2>
+          <p>Chọn một lĩnh vực. Giáo án, ví dụ và bài tập trắc nghiệm sẽ đổi theo lĩnh vực bạn chọn.</p>
+        </div>
+        <button class="ghost-btn" id="closeFieldGateBtn" type="button">Đóng</button>
+      </div>
+      <div class="field-options" id="fieldOptions"></div>
+    </div>
+  </section>
 
   <header class="hero" id="top">
     <nav class="topbar glass">
@@ -25,11 +40,7 @@
         </span>
       </a>
       <div class="nav-actions">
-        <a href="#auth-zone">Đăng nhập</a>
-        <a href="#industry-zone">Lĩnh vực hôm nay</a>
-        <a href="#share-zone">Chia sẻ</a>
-        <a href="#updates-zone">Cập nhật bài</a>
-        <a href="#roadmap-zone">Lộ trình</a>
+        <a href="#readme">README</a>
         <a href="#lessons">Bài học</a>
         <a href="#quiz-zone">Trắc nghiệm</a>
         <a href="#progress-zone">Tiến bộ</a>
@@ -45,25 +56,26 @@
           <span class="vi">Tự học tiếng Anh dùng được ngay trong công việc.</span>
         </h1>
         <p>
-          <span class="en">Practice meetings, email, AI prompts, presentations, networking and customer situations with bilingual notes, US pronunciation, auto-scored exercises and user-based progress tracking.</span>
-          <span class="vi">Luyện họp, email, prompt AI, thuyết trình, networking và chăm sóc khách hàng với ghi chú song ngữ, phát âm Mỹ, bài tập tự chấm điểm và lưu tiến độ theo từng người học.</span>
+          <span class="en">Practice workplace English by field and level: meetings, email, AI prompts, presentations, data, service and career situations with bilingual notes, auto-scored exercises and progress tracking.</span>
+          <span class="vi">Luyện tiếng Anh công việc theo lĩnh vực và level: họp, email, prompt AI, thuyết trình, dữ liệu, dịch vụ và nghề nghiệp với ghi chú song ngữ, bài tập tự chấm điểm và theo dõi tiến bộ.</span>
         </p>
         <div class="hero-actions">
           <a class="primary-btn" href="#lessons">Bắt đầu học</a>
-          <a class="secondary-btn" href="#auth-zone">Đăng nhập Google</a>
+          <a class="secondary-btn" href="#progress-zone">Xem tiến độ</a>
         </div>
         <div class="stats-row" aria-label="Course summary">
           <div><strong id="heroLessonCount">0</strong><span>Bài học</span></div>
           <div><strong id="heroQuestionCount">0</strong><span>Câu hỏi</span></div>
           <div><strong>60'</strong><span>Đổi vibe</span></div>
-          <div><strong>US</strong><span>Đọc từng câu</span></div>
+          <div><strong>7</strong><span>Lĩnh vực</span></div>
+          <div><strong>10</strong><span>Level</span></div>
         </div>
       </div>
 
       <aside class="hero-card glass">
         <div class="image-frame">
           <img id="vibeImage" src="" alt="Không gian học tập chill" />
-          <button class="floating-chip" id="changeVibeBtn" type="button">Đổi giao diện ngẫu nhiên</button>
+          <button class="floating-chip" id="changeVibeBtn" type="button">Đổi không khí</button>
         </div>
         <div class="vibe-info">
           <div>
@@ -78,6 +90,39 @@
   </header>
 
   <main>
+
+    <section class="readme-panel glass" id="readme" aria-label="README công dụng của website">
+      <div class="readme-head">
+        <div>
+          <span class="eyebrow">README • Hướng dẫn nhanh</span>
+          <h2>Website này dùng để làm gì?</h2>
+          <p>Đây là web tĩnh tự học tiếng Anh cho người đi làm. Không cần đăng nhập, không thu email; tiến độ và điểm số được lưu trực tiếp trên trình duyệt bằng localStorage.</p>
+        </div>
+        <a class="secondary-btn" href="#lessons">Vào bài học</a>
+      </div>
+      <div class="readme-grid">
+        <div class="readme-card">
+          <strong>1. Chọn lĩnh vực</strong>
+          <p>Chọn Ẩm thực, Kế toán, Analyst, Du lịch, Khách sạn, Kinh doanh hoặc Marketing để bài học đổi đúng ngữ cảnh công việc.</p>
+        </div>
+        <div class="readme-card">
+          <strong>2. Chọn Level 1–10</strong>
+          <p>Level 1 là câu đơn cơ bản; Level 10 là tiếng Anh nâng cao cho báo cáo, đàm phán và executive summary.</p>
+        </div>
+        <div class="readme-card">
+          <strong>3. Học và làm quiz</strong>
+          <p>Mỗi bài có mẫu câu, cụm từ, ví dụ Anh/Việt, bài tập bắt buộc và trắc nghiệm tự chấm điểm.</p>
+        </div>
+        <div class="readme-card">
+          <strong>4. Theo dõi tiến bộ</strong>
+          <p>Bảng tiến độ lưu số bài hoàn thành, điểm trung bình và streak học tập trên thiết bị hiện tại.</p>
+        </div>
+      </div>
+      <details class="readme-details">
+        <summary>Lưu ý về cập nhật bài học hằng ngày</summary>
+        <p>Vì đây là web tĩnh, website không tự lấy/copy bài từ web khác. Thay vào đó, hệ thống tạo micro-lesson mới theo ngày, lĩnh vực, level và gợi ý nguồn học uy tín để bạn tham khảo thêm.</p>
+      </details>
+    </section>
     <section class="toolbar glass" aria-label="Learning controls">
       <div>
         <span class="label">Ngôn ngữ / Language</span>
@@ -95,17 +140,6 @@
           <option value="3">3 bài / ngày</option>
         </select>
       </div>
-      <div class="voice-box">
-        <span class="label">Phát âm Mỹ / US voice</span>
-        <div class="voice-controls">
-          <button class="icon-btn" id="voiceTestBtn" type="button" aria-label="Nghe thử giọng Mỹ">🔊</button>
-          <select id="voiceSelect" aria-label="Chọn giọng đọc tiếng Anh Mỹ"></select>
-          <label class="volume-label">Tốc độ
-            <input id="speechRate" type="range" min="0.75" max="1.15" step="0.05" value="0.95" />
-          </label>
-        </div>
-        <small id="voiceHint">Bấm nút 🔊 cạnh từng câu tiếng Anh để nghe giọng Mỹ.</small>
-      </div>
       <div class="music-box">
         <span class="label">Nhạc nền YouTube</span>
         <div class="music-controls">
@@ -119,194 +153,56 @@
       </div>
     </section>
 
-    <section class="section-heading" id="auth-zone">
-      <span class="eyebrow">Login & user progress</span>
-      <h2>Đăng nhập, lưu tiến độ theo từng user và xem lịch sử đăng nhập</h2>
-      <p>Chạy ngay ở chế độ cục bộ. Khi thêm Firebase config, website có thể đăng nhập Google, lưu tiến độ lên Firestore và hiển thị ai đã đăng nhập cùng thời gian đăng nhập.</p>
+    <section class="field-picker glass" aria-label="Chọn lĩnh vực học hôm nay">
+      <div>
+        <span class="label">Bước 1 • Lĩnh vực học hôm nay</span>
+        <h2 id="fieldPickerTitle">Bạn muốn học gì hôm nay?</h2>
+        <p>Chọn lĩnh vực để giáo án, ví dụ, bài tập và trắc nghiệm tự đổi theo đúng ngữ cảnh công việc.</p>
+      </div>
+      <button class="secondary-btn field-select-btn" id="changeFieldBtn" type="button">
+        <span id="currentFieldBadge">Lĩnh vực hiện tại: Kinh doanh</span>
+        <span aria-hidden="true">▾</span>
+      </button>
     </section>
 
-    <section class="auth-panel glass">
-      <div class="auth-grid">
-        <div class="auth-card">
-          <div class="planner-header">
-            <div>
-              <span class="label">Google login</span>
-              <h3>Tài khoản đang học</h3>
-            </div>
-            <span class="status-pill" id="authModeBadge">Guest</span>
-          </div>
-          <div id="currentUserCard" class="user-card muted-card">Bạn đang học ở chế độ khách trên trình duyệt này.</div>
-          <div class="auth-actions">
-            <button class="primary-btn" id="googleLoginBtn" type="button">Đăng nhập bằng Google</button>
-            <button class="secondary-btn" id="guestLoginBtn" type="button">Học với Guest</button>
-            <button class="secondary-btn" id="logoutBtn" type="button">Đăng xuất</button>
-          </div>
-          <p class="lesson-note">Google login dùng Firebase Authentication. Không có website nào được đọc mật khẩu Gmail của bạn; nếu Google Password Manager đã lưu mật khẩu, trình duyệt sẽ tự đề xuất điền.</p>
-        </div>
-
-        <form class="auth-card" id="localLoginForm" autocomplete="on">
-          <span class="label">Autofill demo</span>
-          <h3>Đăng nhập email/password cục bộ</h3>
-          <label class="field-label">Email
-            <input id="localEmail" name="email" type="email" autocomplete="username" placeholder="you@example.com" required />
-          </label>
-          <label class="field-label">Password
-            <input id="localPassword" name="password" type="password" autocomplete="current-password" placeholder="Trình duyệt/Google Password Manager có thể tự điền" required />
-          </label>
-          <button class="submit-btn" type="submit">Dùng tài khoản cục bộ</button>
-          <p class="lesson-note">Mật khẩu demo không được gửi đi và không lưu trong code. Dùng Firebase/Google cho bản thật.</p>
-        </form>
-
-        <div class="auth-card setup-card">
-          <span class="label">Firebase setup</span>
-          <h3>Kết nối dữ liệu thật</h3>
-          <textarea id="firebaseConfigInput" rows="8" spellcheck="false" placeholder='Dán firebaseConfig dạng JSON, ví dụ:&#10;{"apiKey":"...","authDomain":"...","projectId":"...","appId":"..."}'></textarea>
-          <div class="auth-actions">
-            <button class="submit-btn" id="saveFirebaseConfigBtn" type="button">Lưu config</button>
-            <button class="secondary-btn" id="connectFirebaseBtn" type="button">Kết nối Firebase</button>
-          </div>
-          <p class="lesson-note" id="authStatus">Chưa kết nối Firebase. Website vẫn hoạt động bằng dữ liệu cục bộ.</p>
-        </div>
-      </div>
-
-      <div class="welcome-panel" id="dailyWelcomePanel" hidden>
-        <div class="welcome-copy">
-          <span class="label" id="welcomeTimeLabel">Welcome</span>
-          <h3 id="welcomeTitle">Good evening, learner!</h3>
-          <p id="welcomeSubtitle">Chọn lĩnh vực muốn học hôm nay, làm bài ngắn và chia sẻ kết quả sau khi hoàn thành.</p>
-        </div>
-        <div class="welcome-actions">
-          <a class="primary-btn" href="#industry-zone">Chọn lĩnh vực hôm nay</a>
-          <a class="secondary-btn" href="#progress-zone">Xem tiến độ</a>
-        </div>
-      </div>
-
-      <div class="permission-card">
+    <section class="level-picker glass" id="levelPicker" aria-label="Chọn cấp độ học tập">
+      <div class="level-picker-head">
         <div>
-          <span class="label">Phân quyền xem lịch sử đăng nhập</span>
-          <h3>Admin: babycute226@gmail.com</h3>
-          <p id="loginScopeNote">Tài khoản admin xem được tất cả trạng thái đăng nhập. User thường chỉ xem được lịch sử của chính mình. Guest chỉ xem được lịch sử guest trên trình duyệt này.</p>
+          <span class="label">Bước 2 • Chọn Level</span>
+          <h2 id="levelPickerTitle">Chọn level từ 1 đến 10</h2>
+          <p id="levelPickerText">Level càng cao, bài học càng dài, ngữ pháp và tình huống càng phức tạp.</p>
         </div>
-        <button class="ghost-btn" id="downloadRulesBtn" type="button">Tải Firebase Rules mẫu</button>
+        <div class="level-current" id="currentLevelBadge">Level 1 • Cơ bản</div>
       </div>
-
-      <div class="login-history">
-        <div class="planner-header">
-          <div>
-            <span class="label">Login audit</span>
-            <h3 id="loginHistoryTitle">Lịch sử đăng nhập của bạn</h3>
-          </div>
-          <button class="ghost-btn" id="refreshLoginLogsBtn" type="button">Làm mới</button>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Người dùng</th><th>Email</th><th>Hình thức</th><th>Thời gian đăng nhập</th><th>Thiết bị</th></tr>
-            </thead>
-            <tbody id="loginHistoryRows">
-              <tr><td colspan="5">Chưa có dữ liệu đăng nhập.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <div class="level-options" id="levelOptions"></div>
     </section>
 
-    <section class="section-heading" id="industry-zone">
-      <span class="eyebrow">Today's random lesson</span>
-      <h2>Chọn lĩnh vực hôm nay bạn muốn học</h2>
-      <p>Sau khi đăng nhập Google, local hoặc Guest, hãy chọn một lĩnh vực. Website sẽ tạo bài học ngẫu nhiên từ mức thấp đến cao dựa trên lịch sử học tập của user hiện tại.</p>
-    </section>
-
-    <section class="industry-panel glass">
-      <div class="planner-header">
+    <section class="daily-update glass" id="dailyUpdate" aria-label="Cập nhật bài học hằng ngày">
+      <div class="daily-update-main">
         <div>
-          <span class="label">7 lĩnh vực thông dụng</span>
-          <h3>Học đúng ngữ cảnh công việc của bạn</h3>
+          <span class="label">Daily Trend Update</span>
+          <h2 id="dailyTrendTitle">Bài học cập nhật hôm nay</h2>
+          <p id="dailyTrendText">Mỗi ngày, website tạo một micro-lesson mới theo lĩnh vực và level bạn chọn.</p>
         </div>
-        <span class="status-pill" id="adaptiveLevelBadge">Đang tính level</span>
+        <button class="secondary-btn" id="refreshDailyBtn" type="button">Đổi gợi ý hôm nay</button>
       </div>
-      <div class="industry-grid" id="industryButtons"></div>
-      <div class="daily-lesson-result" id="dailyLessonResult">
-        <strong>Đăng nhập hoặc chọn Guest để tạo bài học theo user.</strong>
-        <p class="lesson-note">Các bài học sinh ra sẽ được thêm vào danh sách bài, chấm điểm và lưu tiến độ riêng cho từng tài khoản.</p>
-      </div>
-    </section>
-
-    <section class="section-heading" id="updates-zone">
-      <span class="eyebrow">Continuous lesson updates</span>
-      <h2>Cập nhật bài học liên tục</h2>
-      <p>Nạp thêm bài học mới từ file JSON hoặc Firestore mà không phải sửa lại toàn bộ website. Bài học mới sẽ được ghép vào giáo trình hiện có và chấm điểm như bài mặc định.</p>
-    </section>
-
-    <section class="update-panel glass">
-      <div class="update-grid">
-        <div class="update-card">
-          <span class="label">Remote JSON</span>
-          <h3>Nguồn bài học online</h3>
-          <input id="lessonFeedUrl" type="url" placeholder="https://your-domain.com/work-english-lessons.json" />
-          <div class="auth-actions">
-            <button class="submit-btn" id="loadLessonFeedBtn" type="button">Tải bài học mới</button>
-            <button class="ghost-btn" id="resetLessonsBtn" type="button">Khôi phục bài mặc định</button>
-          </div>
-          <p class="lesson-note">JSON có thể là mảng bài học hoặc object dạng <code>{"lessons": [...]}</code>. Dữ liệu đã tải sẽ lưu vào trình duyệt.</p>
+      <div class="daily-grid">
+        <div class="daily-card">
+          <strong>Prompt luyện tập hôm nay</strong>
+          <p id="dailyPromptText"></p>
         </div>
-        <div class="update-card">
-          <span class="label">Import / template</span>
-          <h3>Nhập bài học thủ công</h3>
-          <textarea id="lessonJsonInput" rows="7" spellcheck="false" placeholder="Dán JSON bài học mới tại đây..."></textarea>
-          <div class="auth-actions">
-            <button class="secondary-btn" id="importLessonJsonBtn" type="button">Nhập JSON</button>
-            <button class="ghost-btn" id="downloadLessonTemplateBtn" type="button">Tải mẫu JSON</button>
-          </div>
-        </div>
-        <div class="update-card">
-          <span class="label">Firestore</span>
-          <h3>Đồng bộ từ collection</h3>
-          <p class="lesson-note">Nếu đã kết nối Firebase, nút này sẽ đọc collection <code>courseLessons</code>. Mỗi document là một bài học có các trường: titleEn, titleVi, phrases, questions...</p>
-          <div class="auth-actions">
-            <button class="submit-btn" id="syncFirestoreLessonsBtn" type="button">Đồng bộ bài từ Firestore</button>
-          </div>
-          <div class="sync-status" id="lessonSyncStatus">Nguồn hiện tại: bài học mặc định.</div>
+        <div class="daily-card">
+          <strong>Nguồn xu hướng nên tham khảo</strong>
+          <div class="source-links" id="sourceLinks"></div>
         </div>
       </div>
-    </section>
-
-    <section class="section-heading" id="roadmap-zone">
-      <span class="eyebrow">Learning roadmap & reminders</span>
-      <h2>Lộ trình học và lịch nhắc chăm chỉ</h2>
-      <p>Lộ trình gợi ý chia theo tuần, ưu tiên bài chưa đạt 80%. Lịch mặc định: tối thứ 3, thứ 5, thứ 7 lúc 22:00.</p>
-    </section>
-
-    <section class="roadmap-planner glass">
-      <div class="roadmap-grid" id="roadmapList"></div>
-      <div class="planner-card">
-        <div class="planner-header">
-          <div>
-            <span class="label">Lịch học cá nhân</span>
-            <h3>Tạo lịch nhắc học</h3>
-          </div>
-          <span class="status-pill done">T3 • T5 • T7</span>
-        </div>
-        <div class="planner-form" aria-label="Study schedule form">
-          <div class="day-picker" id="studyDayPicker" aria-label="Chọn ngày học trong tuần"></div>
-          <label class="time-input">Giờ học
-            <input id="studyTimeInput" type="time" value="22:00" />
-          </label>
-          <div class="planner-actions">
-            <button class="submit-btn" id="saveScheduleBtn" type="button">Lưu lịch học</button>
-            <button class="secondary-btn" id="enableNotifyBtn" type="button">Bật nhắc trên trình duyệt</button>
-            <button class="ghost-btn" id="downloadIcsBtn" type="button">Tải lịch .ics</button>
-          </div>
-          <p class="lesson-note" id="reminderStatus">Thông báo trình duyệt hoạt động khi website đang mở. File .ics giúp thêm lịch vào Google/Apple/Outlook Calendar.</p>
-        </div>
-        <div class="plan-preview" id="learningPlanPreview"></div>
-      </div>
+      <p class="lesson-note">Lưu ý: đây là web tĩnh nên không tự sao chép nội dung từ website khác. Phần cập nhật hằng ngày tạo bài mới theo ngày, lĩnh vực, level và liên kết đến nguồn học uy tín để bạn tự tham khảo.</p>
     </section>
 
     <section class="section-heading" id="lessons">
       <span class="eyebrow">Course map</span>
-      <h2>Bài học tiếng Anh cho công việc hiện đại</h2>
-      <p>Mỗi bài có mục tiêu, từ vựng, mẫu câu, ví dụ song ngữ, nút nghe giọng Mỹ từng câu, bài tập bắt buộc và điểm tự động.</p>
+      <h2 id="courseMapTitle">8 bài học theo lĩnh vực và level</h2>
+      <p id="courseMapText">Mỗi bài có mục tiêu, từ vựng, mẫu câu, ví dụ song ngữ, bài tập bắt buộc và điểm tự động.</p>
     </section>
 
     <section class="layout-grid">
@@ -324,7 +220,7 @@
     <section class="section-heading" id="quiz-zone">
       <span class="eyebrow">Practice & scoring</span>
       <h2>Bài tập trắc nghiệm và chấm điểm theo từng môn</h2>
-      <p>Chọn một chủ đề, làm bài và hệ thống sẽ lưu điểm cao nhất vào mục tiến bộ của đúng user đang đăng nhập.</p>
+      <p>Chọn một chủ đề, làm bài và hệ thống sẽ lưu điểm cao nhất vào mục tiến bộ.</p>
     </section>
 
     <section class="quiz-panel glass">
@@ -341,7 +237,7 @@
     <section class="section-heading" id="progress-zone">
       <span class="eyebrow">Progress tracker</span>
       <h2>Theo dõi sự tiến bộ</h2>
-      <p id="progressStorageNote">Tiến độ được lưu theo từng người học. Khi chưa đăng nhập, dữ liệu chỉ lưu trên trình duyệt hiện tại.</p>
+      <p>Tiến độ được lưu trực tiếp trên trình duyệt này bằng localStorage. Website tĩnh không dùng đăng nhập, không thu email và không lưu thông tin tài khoản.</p>
     </section>
 
     <section class="progress-dashboard glass">
@@ -360,33 +256,14 @@
       <div class="scoreboard" id="scoreboard"></div>
     </section>
 
-    <section class="section-heading" id="share-zone">
-      <span class="eyebrow">Daily achievement sharing</span>
-      <h2>Chia sẻ kết quả học tập trong ngày</h2>
-      <p>Tạo nội dung ngắn gọn để gửi cho bạn bè hoặc chia sẻ lên mạng xã hội sau khi học xong.</p>
-    </section>
-
-    <section class="share-panel glass">
-      <div class="share-summary" id="shareSummary">Hôm nay bạn chưa có hoạt động học nào được ghi nhận.</div>
-      <div class="share-actions">
-        <button class="primary-btn" id="nativeShareBtn" type="button">Chia sẻ nhanh</button>
-        <button class="secondary-btn" id="copyShareBtn" type="button">Copy nội dung</button>
-        <a class="ghost-btn" id="shareFacebookBtn" href="#" target="_blank" rel="noopener">Facebook</a>
-        <a class="ghost-btn" id="shareLinkedinBtn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="ghost-btn" id="shareXBtn" href="#" target="_blank" rel="noopener">X/Twitter</a>
-        <a class="ghost-btn" id="shareZaloBtn" href="#" target="_blank" rel="noopener">Zalo</a>
-      </div>
-      <p class="lesson-note" id="shareStatus">Bạn có thể sửa nội dung sau khi copy trước khi đăng.</p>
-    </section>
-
     <section class="references glass">
       <h2>Nội dung cập nhật 2026 dựa trên gì?</h2>
-      <p>Giáo trình tập trung vào giao tiếp tại nơi làm việc, AI collaboration, hybrid meetings, tư duy phản biện, kỹ năng xã hội và học tập suốt đời. Mục tiêu ngôn ngữ tham chiếu CEFR A2–B2 để người học đi làm có thể tiến bộ thực tế.</p>
+      <p>Giáo trình dùng cơ chế tạo bài học theo lĩnh vực, level 1–10 và gợi ý chủ đề mới mỗi ngày. Các nguồn tham khảo nên theo dõi gồm British Council LearnEnglish Business, BBC Learning English, VOA Learning English và Cambridge English Business.</p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Made for self-study • Anh/Việt • US pronunciation • Google/Firebase optional • Progress by user</p>
+    <p>Made for self-study • No login • Auto scoring • Progress saved locally</p>
     <a href="#top">Lên đầu trang ↑</a>
   </footer>
 
